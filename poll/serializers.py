@@ -24,9 +24,3 @@ class PollSerializer(serializers.ModelSerializer):
         if total == 0:
             return "No voting data yet"
         return obj.disagree / total
-
-# poll의 이름, 설명만
-class PollRequestSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Poll
-        fields = ['title', 'description']

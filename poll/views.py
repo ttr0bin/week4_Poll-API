@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import status
 from poll.models import Poll
-from poll.serializers import PollSerializer, PollRequestSerializer
+from poll.serializers import PollSerializer
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -21,7 +21,7 @@ def poll_list(request):
             serializer = PollSerializer(poll, many=True)
             return Response(serializer.data)
         case 'POST':
-            serializer = PollRequestSerializer(data=request.data)
+            serializer = PollSerializer(data=request.data)
             if not serializer.is_valid():
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
             serializer.save()
@@ -41,7 +41,7 @@ def poll_detail(request, id):
             serializer = PollSerializer(poll)
             return Response(serializer.data)
         case 'PUT':
-            serializer = PollRequestSerializer(poll, data=request.data)
+            serializer = PollSerializer(poll, data=request.data)
             if not serializer.is_valid():
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
             serializer.save()
