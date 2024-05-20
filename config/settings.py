@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i6#gf+$#k*rd#k)0^l3a$ng(5lp-2$m7z&1%m-u+cvs-is9h3c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,8 +78,13 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'likelion-prac',
+        'USER': 'ttr0bin',
+        'PASSWORD': 'rlaxorud1',
+        'HOST': 'likelion-prac.c1okcycieb7g.ap-northeast-2.rds.amazonaws.com',
+        'PORT': '3306'
+
     }
 }
 
