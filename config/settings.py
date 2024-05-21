@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'likelionPrac',
         'USER': 'ttr0bin',
         'PASSWORD': 'rlaxorud1',
-        'HOST': 'likelion-prac.c1okcycieb7g.ap-northeast-2.rds.amazonaws.com',
+        'HOST': 'likelionprac.c1okcycieb7g.ap-northeast-2.rds.amazonaws.com',
         'PORT': '3306'
 
     }
