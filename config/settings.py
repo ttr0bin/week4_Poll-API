@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'likelionprac',
+        'NAME': 'likelionPrac',
         'USER': 'ttr0bin',
         'PASSWORD': 'rlaxorud1',
         'HOST': 'likelion-prac.c1okcycieb7g.ap-northeast-2.rds.amazonaws.com',
